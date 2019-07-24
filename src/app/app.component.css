@@ -1,0 +1,13 @@
+#loginbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 21.0937vmax;
+    height: 100%;
+    z-index: 1;
+    background-color: #2b2f3e;
+}
+
+#main {
+    margin-left: 21.0937vmax;
+}

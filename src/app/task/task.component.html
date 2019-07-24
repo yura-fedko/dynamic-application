@@ -1,0 +1,36 @@
+<div class="container">
+    <div id="tasks">
+        <div class="title">
+            Items
+        </div>
+        <div class="input">
+            <input type="text" placeholder="Type name here..." #title>
+            <button [ngClass]="{'addTaskActive': login.state, 'addTask': !login.state}"
+                (click)="addTask(title.value); title.value=''" [disabled]="!login.state">
+                <p>Add new</p>
+            </button>
+        </div>
+        <div *ngFor="let task of tasks" [class.isSelect]="task === selectTask">
+            <div class="task">
+                <div class="item" (click)="onSelect(task)">{{task.title}}</div>
+                <div class="number">{{task.comments.length}}</div>
+                <button [ngClass]="{'deleteActive': login.state, 'delete': !login.state}" (click)="deleteTask(task)"
+                    [disabled]="!login.state">Delete</button>
+            </div>
+        </div>
+    </div>
+    <div id="comments" *ngIf="index">
+        <div class="title2">
+            Comments #{{index}}
+        </div>
+        <div class="comments" *ngFor="let comment of comments">
+            <div class="logo"></div>
+            <div class="comment">{{comment.comment}}</div>
+        </div>
+        <div class="form">
+            <div class="logo"></div>
+            <textarea cols="45" name="text" #input_comment
+                (keyup.enter)="addComment(input_comment.value); input_comment.value=''"></textarea>
+        </div>
+    </div>
+</div>

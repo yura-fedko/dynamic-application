@@ -1,0 +1,205 @@
+.container {
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-self:flex-start;
+    background-color: #f9f9f9;
+}
+
+#tasks {
+    display: flex;
+    flex-direction: column;
+    align-self:flex-start;
+    width: 37.5vmax;
+    margin: 2.3437vmax 12px 2.3437vmax 30px;
+    border: solid 1px #d3d3d3;
+    box-shadow: 0px 0px 7px 1px rgba(0,0,0,.2);
+    background-color: #ffffff;
+    padding-bottom: 10.6562vmax;
+}
+
+.title {
+    font-size: 1.5625vmax;
+    margin-top: 20px;
+    margin-left: 2.3437vmax;
+}
+
+.input {
+    margin: 25px 1.1718vmax 0px 2.3437vmax; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 0.3906vmax;
+}
+
+input {
+    width: 22.6562vmax;
+    height: 2.9687vmax;
+    border-radius: 3px;
+    outline: none;
+    border-width: 0;
+    border: solid 1.5px #e0e0e0;
+    padding-left: 0.7812vmax;
+}
+
+input::-webkit-input-placeholder {
+    color: #ffffff;
+    padding-left: 5px;
+    font-size: 0.8593vmax;
+}  
+
+.addTaskActive {
+    background-color: #27ccc0;
+    outline: none;
+    border-style: solid none;
+    border-width:  0;
+    color: white;
+    width: 10.3125vmax;
+    height: 2.9687vmax;
+    border-radius: 3px;
+    display: flex;
+    text-align: center;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.0937vmax;
+}
+
+.addTask {
+    background-color: #bef0ec;
+    outline: none;
+    border-style: solid none;
+    border-width:  0;
+    color: #feffff;
+    width: 10.3125vmax;
+    height: 2.9687vmax;
+    border-radius: 3px;
+    display: flex;
+    text-align: center;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.0937vmax;
+}
+
+#comments {
+    display: flex;
+    flex-direction: column;
+    align-self:flex-start;
+    width: 34.7656vmax;
+    margin: 2.3437vmax 12px 2.3437vmax 30px;
+    padding: 20px 15px 20px 20px;
+    border: solid 1px #d3d3d3;
+    box-shadow: 0px 0px 7px 1px rgba(0,0,0,.2);
+    background-color: #ffffff;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 1.1718vmax 0 2.3437vmax; 
+    padding: 1.1718vmax 0px 1.1718vmax 0px;
+    border-bottom: solid 1px #f2f2f2;
+}
+
+.item {
+    font-size: 1.0937vmax;
+    display: flex;
+    align-items: center;
+    cursor: pointer
+}
+
+.number {
+    height: 1.9531vmax;
+    margin: auto;
+    padding: 10px;
+    font-size: 1.0937vmax;
+    background-color: #27ccc0;
+    color: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8593vmax;
+}
+
+.deleteActive {
+    width: 7.8135vmax;
+    height: 2.7343vmax;
+    color: #ff3159;
+    border: #ff3159 solid 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.0937vmax;
+    background-color: #ffffff;
+}
+
+.delete {
+    width: 7.8135vmax;
+    height: 2.7343vmax;
+    color: #ffcfd8;
+    border: #ffcfd8 solid 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.0937vmax;
+    background-color: #ffffff;
+}
+
+
+.comments {
+    width: 31.6406;
+    display: flex;
+    flex-direction: row;
+    padding: 15px 0 25px 0;
+    border-bottom: solid 1px #f2f2f2;
+}
+
+.title2 {
+    font-size: 1.5625vmax;
+}
+
+.logo {
+    min-width: 3.9843vmax;
+    height: 3.9843vmax;
+}
+
+.comments:nth-child(even) .logo  {
+    background-color: #ff8a00;
+}
+
+.comments:nth-child(odd) .logo  {
+    background-color: #47568c;
+}
+
+.comment {
+    margin: 0 1.5625vmax 1.9531vmax 1.1718vmax;
+    font-size: 0.7812vmax;
+}
+
+.form {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px; 
+    height: auto;
+}
+
+.form .logo {
+    background-color: #e6e6e6;
+}
+
+.isSelect {
+    border-left: #ff3159 solid 3px;
+}
+
+textarea { 
+    width: 26.1718vmax;    ;
+    height: 5.4687vmax;
+    padding: 0.7812vmax;
+    border: 1px solid #e2e2e2;
+    border-radius: 3px;
+    font-size: 0.7812vmax;
+    resize: none;
+    margin-left: 1.1718vmax;
+}

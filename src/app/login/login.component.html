@@ -1,0 +1,31 @@
+<div id="login">
+    <div class="titel">
+        <div>DYNAMIC APP</div>
+    </div>
+    <form class="form" *ngIf="!login.state" [formGroup]="loginControl">
+        <div class="form_itm input">
+            <label>Log in</label>
+            <input class="input" type="text" placeholder="Username" formControlName = "usernameControl" >
+            <div class="invalid">
+                <div *ngIf=usernameControlStatus>login must be at least 20 characters long and email must be @gmail.com</div>
+            </div>
+        </div>
+        <div class="formitm input">
+            <label for="exampleInputPassword1">Password</label>
+            <input class="input" placeholder="*********" formControlName="passwordControl" >
+            <div class="invalid">
+                <div *ngIf="passwordControlStatus">Password must be 8-16 characters with at least</div>
+            </div>
+        </div>
+        <div class="formitm form_btn">
+            <button type="button" (click)="logInFn(usernameControl, passwordControl)">Log in</button>
+            <button type="reset" >Cancel</button>
+        </div>
+    </form>
+    <div class="logOut" *ngIf="login.state">
+        <div class="username">
+            {{login.username}}
+        </div>
+        <button class="logOutBtn" (click)="logOutFn()">Log Out</button>
+    </div>
+</div>
